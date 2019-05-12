@@ -1,14 +1,12 @@
 package pl.sda.projektpogodynka.pogodynka;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 
 @Document
 public class SensorModel {
-    @GeneratedValue
     @Id
     String id;
     String name;

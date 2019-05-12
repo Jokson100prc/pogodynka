@@ -24,7 +24,7 @@ public class SensorController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Sensor> getSensorById(@PathVariable Double id){
+    public Optional<Sensor> getSensorById(@PathVariable String id){
         return sensorRepository.findById(id);
     }
 
@@ -34,7 +34,7 @@ public class SensorController {
     }
 
     @DeleteMapping("/{id}")
-    public void deleteSensorById(@PathVariable Double id){
+    public void deleteSensorById(@PathVariable String id){
         sensorRepository.deleteById(id);
     }
 }
