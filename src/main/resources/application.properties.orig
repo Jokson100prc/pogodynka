@@ -1,6 +1,6 @@
-
+<<<<<<< HEAD
 server.port=8082
-
+=======
 
 spring.data.mongodb.database=sensor
 spring.data.mongodb.host=localhost
