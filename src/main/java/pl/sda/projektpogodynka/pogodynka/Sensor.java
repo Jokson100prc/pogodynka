@@ -60,4 +60,14 @@ public class Sensor {
     public void setDate(LocalDateTime date) {
         this.date = date;
     }
+
+    @Override
+    public String toString() {
+        return "Sensor{" +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", sensorData=" + sensorData +
+                ", date=" + date +
+                '}';
+    }
 }

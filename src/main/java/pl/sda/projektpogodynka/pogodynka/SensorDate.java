@@ -28,4 +28,12 @@ class SensorData {
     public void setValue(Double value) {
         this.value = value;
     }
+
+    @Override
+    public String toString() {
+        return "SensorData{" +
+                "name='" + name + '\'' +
+                ", value=" + value +
+                '}';
+    }
 }
