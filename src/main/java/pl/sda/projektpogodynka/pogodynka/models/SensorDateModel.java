@@ -1,4 +1,4 @@
-package pl.sda.projektpogodynka.pogodynka;
+package pl.sda.projektpogodynka.pogodynka.models;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;
@@ -8,4 +8,3 @@ import java.util.HashMap;
         HashMap<String, Double> values;
         LocalDateTime date;
     }
-

@@ -1,4 +1,4 @@
-package pl.sda.projektpogodynka.pogodynka;
+package pl.sda.projektpogodynka.pogodynka.objects;
 
 
 class SensorData {

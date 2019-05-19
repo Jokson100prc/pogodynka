@@ -21,9 +21,22 @@
     <tr th:each="sensor: ${allSensors}">
         <td th:text="${sensor.name}"></td>
         <td th:text="${sensor.description}"></td>
-        <td th:text="${sensor.sensorData.getName(0)}"></td>
-        <td th:text="${sensor.sensorData.getValue(0)}"></td>
+        <td th:text="${sensor.sensorData.get(0).name}"></td>
+        <td th:text="${sensor.sensorData.get(0).value}"></td>
         <td th:text="${sensor.date}"></td>
+    </tr>
+    </tbody>
+</table>
+<table>
+    <thead>
+    <tr>
+        <th>Użytkownik</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="user: ${allUsers}">
+        <td th:text="${user.name}"></td>
     </tr>
     </tbody>
 </table>
