@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #444;
+    color: #eee;
+    font-size: 22px;
+    font-family: Consolas, SansSerif;
+    text-align: center;
+    height: 100vh;
+}
+
+.one{
+    color: darkviolet;
+}
+
+.two{
+    color: red;
+}
+
+.three{
+    color: orange;
+}
+
+.four{
+    color: yellow;
+}
+
+.five{
+    color: green;
+}

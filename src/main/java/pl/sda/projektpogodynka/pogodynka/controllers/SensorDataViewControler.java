@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import pl.sda.projektpogodynka.pogodynka.repository.SensorRepository;
 
 @Controller
-@RequestMapping("view/pogodynka/sensors")
+@RequestMapping("api/pogodynka/view/sensors")
 public class SensorDataViewControler {
 
     private SensorRepository sensorRepository;
@@ -20,9 +20,9 @@ public class SensorDataViewControler {
 
 
     @GetMapping
-    public String allSensorsView(Model indexViewModel){
-    indexViewModel.addAttribute("allSensors", sensorRepository.findAll());
+    public String allSensorsView(Model indexViewModel) {
+        indexViewModel.addAttribute("allSensors", sensorRepository.findAll());
 
-    return "index";
-}
+        return "current-data-sensor";
+    }
 }

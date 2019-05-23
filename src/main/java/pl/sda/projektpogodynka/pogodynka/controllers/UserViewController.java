@@ -20,6 +20,6 @@ public class UserViewController {
     public String allUserView(Model indexViewModel){
         indexViewModel.addAttribute("allUsers", userRepository.findAll());
 
-        return "index";
+        return "sensor-result";
     }
 }

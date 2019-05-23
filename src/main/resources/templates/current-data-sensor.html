@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Obecne dane z czujnikow</title>
+</head>
+<body>
+ <h1>Nie jesteś zalogowany</h1>
+ <h2>Kliknij aby zobaczyć wykresy danych z poprzednich okresów</h2>
+<button>Wykresy</button>
+
+ <table>
+    <thead>
+    <tr>
+        <th class="one">Czujnik</th>
+        <th class="two">Opis</th>
+        <th class="three">Pomiar</th>
+        <th class="four">Wartość</th>
+        <th class="five">Data</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="sensor: ${allSensors}">
+        <td th:text="${sensor.name}"></td>
+        <td th:text="${sensor.description}"></td>
+        <td th:text="${sensor.sensorData.get(0).name}"></td>
+        <td th:text="${sensor.sensorData.get(0).value}"></td>
+        <td th:text="${sensor.date}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
