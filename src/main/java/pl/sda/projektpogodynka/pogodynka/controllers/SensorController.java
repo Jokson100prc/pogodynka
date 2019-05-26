@@ -1,11 +1,11 @@
 package pl.sda.projektpogodynka.pogodynka.controllers;
 
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pl.sda.projektpogodynka.pogodynka.repository.SensorRepository;
 import pl.sda.projektpogodynka.pogodynka.objects.Sensor;
 
+import java.time.LocalDateTime;
 import java.util.Optional;
 
 @RestController
@@ -15,10 +15,6 @@ public class SensorController {
     static final String API_SENSOR_PATH = "api/pogodynka";
     private SensorRepository sensorRepository;
 
-    public SensorController() {
-    }
-
-    @Autowired
     public SensorController(SensorRepository sensorRepository) {
         this.sensorRepository = sensorRepository;
     }
@@ -35,6 +31,7 @@ public class SensorController {
 
     @PostMapping
     public void sendSensor(@RequestBody Sensor sensor) {
+        sensor.setDate(LocalDateTime.now());
         sensorRepository.save(sensor);
     }
 

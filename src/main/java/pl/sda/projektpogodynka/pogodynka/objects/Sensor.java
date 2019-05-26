@@ -1,6 +1,5 @@
 package pl.sda.projektpogodynka.pogodynka.objects;
 
-import pl.sda.projektpogodynka.pogodynka.objects.SensorData;
 
 import java.time.LocalDateTime;
 import java.util.List;

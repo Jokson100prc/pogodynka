@@ -7,6 +7,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
 public class SensorModel {
+
+    // tu mam dane niezmienne które będą wysłane raz do DB
     @Id
     String id;
     String name;

@@ -5,11 +5,11 @@
     <title>Obecne dane z czujnikow</title>
 </head>
 <body>
- <h1>Nie jesteś zalogowany</h1>
- <h2>Kliknij aby zobaczyć wykresy danych z poprzednich okresów</h2>
+<h1>Pomiary z sensora</h1>
+<h2>Tu będzie umieszczony przycisk: 'Kliknij aby zobaczyć wykresy danych z poprzednich okresów'</h2>
 <button>Wykresy</button>
 
- <table>
+<table>
     <thead>
     <tr>
         <th class="one">Czujnik</th>
@@ -26,6 +26,14 @@
         <td th:text="${sensor.description}"></td>
         <td th:text="${sensor.sensorData.get(0).name}"></td>
         <td th:text="${sensor.sensorData.get(0).value}"></td>
+        <td th:text="${sensor.sensorData.get(1).name}"></td>
+        <td th:text="${sensor.sensorData.get(1).value}"></td>
+        <!--  do wprowadzenia  = możliwość wyłapywania null i pustego stringa  -->
+<!--        KOREKTA  możliwość wyłąpywania błędów nie należy do VIEW - to będzie w klasie Controller lub  SERVICE -->
+
+<!--        <div th:text ="${variable                      != null} ? (${variable                      != ''} ? ${variable                     } : 'empty string message') : 'null message' "></div>-->
+<!--        <div th:text ="${sensor.sensorData.get(0).name != null} ? (${sensor.sensorData.get(0).name != ''} ? ${sensor.sensorData.get(0).name} : 'empty string message') : 'null message' "></div>-->
+        <!--        <div th:text ="${sensor.sensorData.get(0).value != null} ? (${sensor.sensorData.get(0).value != ''} ? ${sensor.sensorData.get(0).value} : 'empty string message') : 'null message' "></div>-->
         <td th:text="${sensor.date}"></td>
     </tr>
     </tbody>

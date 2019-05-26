@@ -10,15 +10,15 @@
 //@EnableWebSecurity
 //public class SecurityConfiguration {
 //
-//    @Configuration
-//    public static class LogedUserSecurityConfiguration extends WebSecurityConfigurerAdapter {
-//        @Override
-//        protected void configure(HttpSecurity httpSecurity) throws Exception {
-//            httpSecurity.antMatcher("/api/guest/**").authorizeRequests()
-//                    .anyRequest().authenticated()
-//                    .and().httpBasic().and().csrf().disable();
-//        }
-//    }
+////    @Configuration
+////    public static class LogedUserSecurityConfiguration extends WebSecurityConfigurerAdapter {
+////        @Override
+////        protected void configure(HttpSecurity httpSecurity) throws Exception {
+////            httpSecurity.antMatcher("/api/guest/**").authorizeRequests()
+////                    .anyRequest().authenticated()
+////                    .and().httpBasic().and().csrf().disable();
+////        }
+////    }
 //
 //    @Configuration
 //    @Order(1)

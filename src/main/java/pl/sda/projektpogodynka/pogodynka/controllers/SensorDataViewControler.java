@@ -13,7 +13,6 @@ public class SensorDataViewControler {
 
     private SensorRepository sensorRepository;
 
-    @Autowired
     public SensorDataViewControler(SensorRepository sensorRepository) {
         this.sensorRepository = sensorRepository;
     }
@@ -22,7 +21,6 @@ public class SensorDataViewControler {
     @GetMapping
     public String allSensorsView(Model indexViewModel) {
         indexViewModel.addAttribute("allSensors", sensorRepository.findAll());
-
         return "current-data-sensor";
     }
 }
